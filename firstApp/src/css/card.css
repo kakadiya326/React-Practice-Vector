@@ -1,0 +1,45 @@
+.con {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 10px 15px;
+}
+
+.card {
+    width: 30%;
+    position: relative;
+    border-radius: 20px;
+    background-color: ivory;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease-in-out;
+    overflow: none;
+    box-shadow: 0px 0px 30px 20px grey;
+}
+
+.card div {
+    color: black;
+    border: 3px solid black;
+    box-sizing: border-box;
+}
+
+table {
+    border: 2px solid white;
+}
+
+td,
+th {
+    border: 1px solid gray;
+
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
