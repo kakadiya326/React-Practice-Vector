@@ -29,6 +29,10 @@
     box-sizing: border-box;
 }
 
+p span{
+    font-weight: 700;
+}
+
 table {
     border: 2px solid white;
 }
