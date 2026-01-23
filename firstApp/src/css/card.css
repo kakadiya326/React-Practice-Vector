@@ -1,10 +1,13 @@
 .con {
     width: 90%;
+    height: 80vh;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 20px;
     margin: 10px 15px;
+    position: relative;
+    background-color: brown;
 }
 
 .card {
@@ -25,11 +28,11 @@
 
 .card div {
     color: black;
-    border: 3px solid black;
+    /* border: 3px solid black; */
     box-sizing: border-box;
 }
 
-p span{
+p span {
     font-weight: 700;
 }
 
@@ -46,4 +49,51 @@ th {
 img {
     width: 150px;
     height: 150px;
+}
+
+
+.container {
+    width: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btnsCon {
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+.container>p {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 800;
+    color: black;
+    border-radius: 50%;
+}
+
+.incbtn,
+.decbtn {
+    width: fit-content;
+    height: 50px;
+    font-size: 20px;
+}
+
+.incbtn {
+    background-color: green;
+}
+
+
+.decbtn {
+    background-color: red;
 }

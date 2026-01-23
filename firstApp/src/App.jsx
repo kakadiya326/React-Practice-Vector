@@ -10,101 +10,101 @@ import RenderArrObj5 from './Components/RenderArrObj5'
 import RenderProps6 from './Components/RenderProps6'
 import RenderPropsBtn7 from './Components/RenderPropsBtn7'
 import RCompIterateArrObj8 from './Components/RCompIterateArrObj8'
+import StateManage9 from './Components/StateManage9'
 
 function App() {
 
-  let students = [
-    {
-      "Id": 1,
-      "Name": "Aarav Patel",
-      "Age": 20,
-      "Grade": "A",
-      "Email": "aarav.patel@example.com"
-    },
-    {
-      "Id": 2,
-      "Name": "Neha Sharma",
-      "Age": 21,
-      "Grade": "B+",
-      "Email": "neha.sharma@example.com"
-    },
-    {
-      "Id": 3,
-      "Name": "Rohan Mehta",
-      "Age": 19,
-      "Grade": "A-",
-      "Email": "rohan.mehta@example.com"
-    },
-    {
-      "Id": 4,
-      "Name": "Priya Verma",
-      "Age": 22,
-      "Grade": "B",
-      "Email": "priya.verma@example.com"
-    },
-    {
-      "Id": 5,
-      "Name": "Karan Singh",
-      "Age": 20,
-      "Grade": "A",
-      "Email": "karan.singh@example.com"
-    },
-    {
-      "Id": 6,
-      "Name": "Ananya Iyer",
-      "Age": 21,
-      "Grade": "A+",
-      "Email": "ananya.iyer@example.com"
-    },
-    {
-      "Id": 7,
-      "Name": "Vikram Joshi",
-      "Age": 23,
-      "Grade": "B-",
-      "Email": "vikram.joshi@example.com"
-    },
-    {
-      "Id": 8,
-      "Name": "Sneha Kulkarni",
-      "Age": 19,
-      "Grade": "A",
-      "Email": "sneha.kulkarni@example.com"
-    },
-    {
-      "Id": 9,
-      "Name": "Rahul Nair",
-      "Age": 22,
-      "Grade": "B+",
-      "Email": "rahul.nair@example.com"
-    },
-    {
-      "Id": 10,
-      "Name": "Pooja Choudhary",
-      "Age": 20,
-      "Grade": "A-",
-      "Email": "pooja.choudhary@example.com"
-    }
-  ]
+  // let students = [
+  //   {
+  //     "Id": 1,
+  //     "Name": "Aarav Patel",
+  //     "Age": 20,
+  //     "Grade": "A",
+  //     "Email": "aarav.patel@example.com"
+  //   },
+  //   {
+  //     "Id": 2,
+  //     "Name": "Neha Sharma",
+  //     "Age": 21,
+  //     "Grade": "B+",
+  //     "Email": "neha.sharma@example.com"
+  //   },
+  //   {
+  //     "Id": 3,
+  //     "Name": "Rohan Mehta",
+  //     "Age": 19,
+  //     "Grade": "A-",
+  //     "Email": "rohan.mehta@example.com"
+  //   },
+  //   {
+  //     "Id": 4,
+  //     "Name": "Priya Verma",
+  //     "Age": 22,
+  //     "Grade": "B",
+  //     "Email": "priya.verma@example.com"
+  //   },
+  //   {
+  //     "Id": 5,
+  //     "Name": "Karan Singh",
+  //     "Age": 20,
+  //     "Grade": "A",
+  //     "Email": "karan.singh@example.com"
+  //   },
+  //   {
+  //     "Id": 6,
+  //     "Name": "Ananya Iyer",
+  //     "Age": 21,
+  //     "Grade": "A+",
+  //     "Email": "ananya.iyer@example.com"
+  //   },
+  //   {
+  //     "Id": 7,
+  //     "Name": "Vikram Joshi",
+  //     "Age": 23,
+  //     "Grade": "B-",
+  //     "Email": "vikram.joshi@example.com"
+  //   },
+  //   {
+  //     "Id": 8,
+  //     "Name": "Sneha Kulkarni",
+  //     "Age": 19,
+  //     "Grade": "A",
+  //     "Email": "sneha.kulkarni@example.com"
+  //   },
+  //   {
+  //     "Id": 9,
+  //     "Name": "Rahul Nair",
+  //     "Age": 22,
+  //     "Grade": "B+",
+  //     "Email": "rahul.nair@example.com"
+  //   },
+  //   {
+  //     "Id": 10,
+  //     "Name": "Pooja Choudhary",
+  //     "Age": 20,
+  //     "Grade": "A-",
+  //     "Email": "pooja.choudhary@example.com"
+  //   }
+  // ]
 
-
-  let sty1 = {
-    "color": "blue",
-    "background": "yellow",
-    "border": "2px solid crimson",
-    "borderRadius": "0px",
-  }
-  let sty2 = {
-    "color": "white",
-    "background": "green",
-    "border": "2px solid black",
-    "borderRadius": "10px",
-  }
-  let sty3 = {
-    "color": "white",
-    "background": "red",
-    "border": "2px solid crimson",
-    "borderRadius": "30px",
-  }
+  // let sty1 = {
+  //   "color": "blue",
+  //   "background": "yellow",
+  //   "border": "2px solid crimson",
+  //   "borderRadius": "0px",
+  // }
+  // let sty2 = {
+  //   "color": "white",
+  //   "background": "green",
+  //   "border": "2px solid black",
+  //   "borderRadius": "10px",
+  // }
+  // let sty3 = {
+  //   "color": "white",
+  //   "background": "red",
+  //   "border": "2px solid crimson",
+  //   "borderRadius": "30px",
+  // }
 
   return (
     <>
@@ -134,16 +134,16 @@ function App() {
       <RenderPropsBtn7 label="Logout" sty={sty3} /> */}
 
       {/* def-08 */}
-
-      <div className='con'>
+      {/* <div className='con'>
         {
           students.map((obj) => {
             return <RCompIterateArrObj8 key={obj.Id} student={obj} />
           })
         }
-      </div>
+      </div> */}
 
-
+      {/* def-09 */}
+      <StateManage9 />
 
     </>
   )
