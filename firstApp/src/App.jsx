@@ -11,6 +11,7 @@ import RenderProps6 from './Components/RenderProps6'
 import RenderPropsBtn7 from './Components/RenderPropsBtn7'
 import RCompIterateArrObj8 from './Components/RCompIterateArrObj8'
 import StateManage9 from './Components/StateManage9'
+import ConditionalRen10 from './Components/ConditionalRen10'
 
 function App() {
 
@@ -143,7 +144,10 @@ function App() {
       </div> */}
 
       {/* def-09 */}
-      <StateManage9 />
+      {/* <StateManage9 /> */}
+
+      {/* def-10 */}
+      <ConditionalRen10/>
 
     </>
   )

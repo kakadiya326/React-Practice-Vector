@@ -10,6 +10,26 @@
     background-color: brown;
 }
 
+.dt{
+    width: 1000px;
+    background-color: black;
+    color: white;
+}
+.lt{
+    background-color: whitesmoke;
+    color: black;
+    width: 1000px;
+}
+
+.lt button{
+    background-color: white ;
+    color: black;
+}
+.dt button{
+    background-color: black;
+    color: white;
+}
+
 .card {
     width: 30%;
     position: relative;
@@ -79,11 +99,12 @@ img {
     font-size: 40px;
     font-weight: 800;
     color: black;
-    border-radius: 50%;
+    border-radius: 20px;
 }
 
 .incbtn,
-.decbtn {
+.decbtn,
+.resetbtn {
     width: fit-content;
     height: 50px;
     font-size: 20px;
@@ -96,4 +117,8 @@ img {
 
 .decbtn {
     background-color: red;
+}
+
+.resetbtn {
+    background-color: coral;
 }
