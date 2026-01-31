@@ -10,22 +10,24 @@
     background-color: brown;
 }
 
-.dt{
+.dt {
     width: 1000px;
     background-color: black;
     color: white;
 }
-.lt{
+
+.lt {
     background-color: whitesmoke;
     color: black;
     width: 1000px;
 }
 
-.lt button{
-    background-color: white ;
+.lt button {
+    background-color: white;
     color: black;
 }
-.dt button{
+
+.dt button {
     background-color: black;
     color: white;
 }
@@ -121,4 +123,79 @@ img {
 
 .resetbtn {
     background-color: coral;
+}
+
+.clock-con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: blanchedalmond;
+    padding: 40px;
+    border-radius: 20px;
+    font-size: xx-large;
+    font-weight: 600;
+}
+.clock-con span{
+    background-color: burlywood;
+    padding: 20px;
+    font-size: 40px;
+    border-radius: 20px;
+}
+
+.stop-btns{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.stop-btns button{
+    width: 33%;
+    box-sizing: border-box;
+}
+
+.stop-btns button:nth-child(1){
+    background-color: green;
+}
+.stop-btns button:nth-child(1):hover{
+    background-color: white;
+    border: 2px solid green;
+    color: green;
+}
+
+.stop-btns button:nth-child(2){
+    background-color: yellowgreen;
+}
+.stop-btns button:nth-child(2):hover{
+    background-color: white;
+    border: 2px solid yellowgreen;
+    color: yellowgreen;
+}
+
+.stop-btns button:nth-child(3){
+    background-color: brown;
+}
+.stop-btns button:nth-child(3):hover{
+    background-color: white;
+    border: 2px solid brown;
+    color: brown;
+}
+
+.numAni{
+    width: 300px;
+    height: 15vh;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slide 1s infinite ease-in-out;
+    position: absolute;
+    top: 50px;
+    bottom: 50px;
+}
+@keyframes slide{
+    from{
+        top: 90px;
+    }
 }

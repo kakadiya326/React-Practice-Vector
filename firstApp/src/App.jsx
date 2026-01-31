@@ -12,6 +12,13 @@ import RenderPropsBtn7 from './Components/RenderPropsBtn7'
 import RCompIterateArrObj8 from './Components/RCompIterateArrObj8'
 import StateManage9 from './Components/StateManage9'
 import ConditionalRen10 from './Components/ConditionalRen10'
+import FormDataCollect11 from './Components/formDataCollect11'
+import Todo12 from './Components/todo12'
+import CollectFormData13 from './Components/CollectFormData13'
+import LifeCycle14 from './Components/lifeCycle14'
+import BmiCalculator15 from './Components/bmiCalculator15'
+import DigitalClock16 from './Components/DigitalClock16'
+import StopWatch17 from './Components/StopWatch17'
 
 function App() {
 
@@ -147,8 +154,28 @@ function App() {
       {/* <StateManage9 /> */}
 
       {/* def-10 */}
-      <ConditionalRen10/>
+      {/* <ConditionalRen10/> */}
 
+      {/* def-11 */}
+      {/* <FormDataCollect11 /> */}
+
+      {/* def-12 */}
+      {/* <Todo12 /> */}
+
+      {/* def-13 */}
+      {/* <CollectFormData13/> */}
+
+      {/* def-14 */}
+      {/* <LifeCycle14 /> */}
+
+      {/* def-15 */}
+      {/* <BmiCalculator15/> */}
+
+      {/* def-16 */}
+      {/* <DigitalClock16 /> */}
+
+      {/* def-17 */}
+      <StopWatch17 />
     </>
   )
 }
