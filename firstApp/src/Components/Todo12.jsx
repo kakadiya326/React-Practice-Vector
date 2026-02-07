@@ -1,4 +1,5 @@
 import { useState } from "react"
+import BackButton from "./BackButton"
 
 let Todo12 = () => {
     let [data, setData] = useState("")
@@ -34,6 +35,7 @@ let Todo12 = () => {
     }
     return (
         <div >
+            <BackButton/>
             <input type="text" className="text-dark bg-white p-2 text-end ps-5 border-4 rounded-pill m-4 " placeholder="Enter your task..." onChange={fun} value={data} />
             {f && <button onClick={add}>Add</button>}
             {!f && <button onClick={upd}>Update</button>}

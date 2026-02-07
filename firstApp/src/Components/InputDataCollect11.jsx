@@ -1,6 +1,7 @@
 import { useState } from "react";
+import BackButton from "./BackButton";
 
-let FormDataCollect11 = () => {
+let InputDataCollect11 = () => {
     let [data, setData] = useState("");
     let fun = (event) => {
         setData(event.target.value.toLowerCase())
@@ -8,9 +9,10 @@ let FormDataCollect11 = () => {
 
     return (
         <div>
+            <BackButton/>
             <input type="text" onChange={fun} />
             <div>{data}</div>
         </div>
     );
 }
-export default FormDataCollect11
+export default InputDataCollect11

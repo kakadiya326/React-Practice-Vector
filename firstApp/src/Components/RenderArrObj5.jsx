@@ -1,4 +1,5 @@
 import '../css/card.css'
+import BackButton from './BackButton'
 const products =
     [
         {
@@ -245,25 +246,28 @@ const products =
 
 let RenderArrObj5 = () => {
     return (
-        <div className='con'>
-            {
-                products.map(
-                    (product) => {
-                        return (
-                            <div className='card'>
-                                <img src={product.image} alt="product" />
-                                <p>Title : {product.title}</p>
-                                <p>Rating : {product.rating.rate} from {product.rating.count}</p>
+        <>
+            <BackButton />
+            <div className='con'>
+                {
+                    products.map(
+                        (product) => {
+                            return (
+                                <div className='card'>
+                                    <img src={product.image} alt="product" />
+                                    <p>Title : {product.title}</p>
+                                    <p>Rating : {product.rating.rate} from {product.rating.count}</p>
 
-                                <p>Price : {product.price}</p>
-                                <p>Description : {product.description}</p>
-                                <p>Category : {product.category}</p>
-                            </div>
-                        )
-                    }
-                )
-            }
-        </div>
+                                    <p>Price : {product.price}</p>
+                                    <p>Description : {product.description}</p>
+                                    <p>Category : {product.category}</p>
+                                </div>
+                            )
+                        }
+                    )
+                }
+            </div>
+        </>
     )
 }
 

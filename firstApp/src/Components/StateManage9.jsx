@@ -1,5 +1,6 @@
 import { useState } from "react"
 import "../css/card.css"
+import BackButton from "./BackButton"
 
 let StateManager9 = () => {
     let [c, setC] = useState(0)
@@ -16,6 +17,7 @@ let StateManager9 = () => {
 
     return (
         <div className="container">
+            <BackButton/>
             <p>{c}</p>
             <div className="btnsCon">
                 <button onClick={inc} className="incbtn">Increment</button>

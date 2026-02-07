@@ -1,4 +1,5 @@
 import { useState } from "react"
+import BackButton from "./BackButton";
 
 let BmiCalculator15 = () => {
     let [data, setData] = useState({
@@ -20,6 +21,7 @@ let BmiCalculator15 = () => {
     }
     return (
         <div>
+            <BackButton/>
             <p>{result}</p>
             <input type="number" min={1.3} max={2.72} step={0.2} name="height" onChange={collectData} value={data.height} placeholder="Enter your height in meter..." />
             <input type="number" min={1} step={5} name="weight" onChange={collectData} value={data.weight} placeholder="Enter your weight in kgs..." />

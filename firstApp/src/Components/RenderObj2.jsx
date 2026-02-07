@@ -1,4 +1,5 @@
 import '../css/card.css'
+import BackButton from './BackButton'
 export default function RenderObj2() {
     let data = {
         "ID": "V25HSF2",
@@ -8,6 +9,7 @@ export default function RenderObj2() {
     }
     return (
         <div className="card">
+            <BackButton/>
             <div>ID : { data.ID }</div>
             <div>NAME : { data.NAME }</div>
             <div>COURSE : { data.COURSE }</div>

@@ -1,4 +1,5 @@
 import '../css/card.css'
+import BackButton from './BackButton'
 
 export default function () {
     const products =
@@ -247,6 +248,7 @@ export default function () {
 
     return (
         <div className='con'>
+            <BackButton/>
             <h1>Products Details</h1>
             <table>
                 <thead>

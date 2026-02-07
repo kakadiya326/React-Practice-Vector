@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import '../css/card.css'
+import BackButton from './BackButton';
 
 let StopWatch17 = () => {
     let [s, setS] = useState(0);
@@ -43,6 +44,7 @@ let StopWatch17 = () => {
 
     return (
         <>
+            <BackButton/>
             <div className="clock-con">
                 <span>{h < 10 ? "0" + h : h}</span>:
                 <span>{m < 10 ? "0" + m : m}</span>:

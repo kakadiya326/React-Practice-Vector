@@ -1,4 +1,5 @@
 import { useState } from "react"
+import BackButton from "./BackButton";
 
 let CollectFormData13 = () => {
     let [data, setData] = useState({
@@ -68,6 +69,7 @@ let CollectFormData13 = () => {
 
     return (
         <div>
+            <BackButton/>
             <div className="container-fluid w-100 border rounded-4">
                 <div className="row">
                     <label htmlFor="title">Title</label>

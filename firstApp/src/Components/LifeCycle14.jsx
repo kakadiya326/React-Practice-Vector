@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
+import BackButton from "./BackButton";
 
 const LifeCycle14 = () => {
 
     let [c, setC] = useState(0);
 
     useEffect(() => {
-        console.log("Mount Added");
+        console.log("Mount Added");        
     }, [])
 
     useEffect(() => {
@@ -13,12 +14,12 @@ const LifeCycle14 = () => {
     }, [c])
 
     useEffect(() => {
-        console.log("Mount Removed");
+       return ()=>console.log("Mount Removed");
     }, [])
-
 
     return (
         <div>
+            <BackButton/>
             <p>{c}</p>
             <div className="btndis">
                 <button onClick={() => setC(c + 1)}>Add</button>

@@ -34,6 +34,7 @@
 
 .card {
     width: 30%;
+    min-width: 450px;
     position: relative;
     border-radius: 20px;
     background-color: ivory;
@@ -198,4 +199,98 @@ img {
     from{
         top: 90px;
     }
+}
+
+.w-card{
+    width: 100%;
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.w-icon{
+    width: 60px;
+    height: 60px;
+}
+
+.w-con{
+    width: 100%;
+}
+
+.w-con input{
+    width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    color: black;
+}
+
+.ac-con{
+    width: 100%;
+    background-color: aliceblue;
+    border: 2px solid black;
+    padding: 40px;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.acc{
+    background-color: beige;
+    border: 2px double black;
+    padding: 10px;
+}
+
+.hd {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hd i{
+    font-size: 20px;
+}
+
+.cont{
+    text-align: justify;
+    overflow: none;
+}
+
+.nav-con{
+    width: 100%;
+    background-color: aliceblue;
+    border: 2px solid black;
+    padding: 40px;
+    border-radius: 9px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-con a{
+    text-decoration: underline;
+}
+
+.back-btn-con{
+    height: 65px;
+    width: 65px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 20px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid blue;
+    background-color: blanchedalmond;
+}
+
+.back-btn-con:hover{
+    border: 2px solid red;
 }
