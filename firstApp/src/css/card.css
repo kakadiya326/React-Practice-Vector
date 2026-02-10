@@ -263,7 +263,6 @@ img {
     background-color: aliceblue;
     border: 2px solid black;
     padding: 40px;
-    border-radius: 9px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -273,6 +272,18 @@ img {
 
 .nav-con a{
     text-decoration: underline;
+}
+
+.acc{
+    max-width: 30%;
+    max-height: max-content;
+    border-radius: 14px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.acc p{
+    word-break: keep-all;
 }
 
 .back-btn-con{

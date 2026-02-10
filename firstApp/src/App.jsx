@@ -23,13 +23,17 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import NavBar from './Components/NavBar'
 import InputDataCollect11 from './Components/InputDataCollect11'
 import BackButton from './Components/BackButton'
+import PropDrilling22 from './Components/PropDrilling22'
+import ContextUse23 from './Components/ContextUse23'
+import MyContext from './Components/MyContext'
+import StateLifting24 from './Components/StateLifting24'
 
 function App() {
 
   let students = [
     {
       "Id": 1,
-      "Name": "Aarav Patel",
+      "Name": "Chiranj Patel",
       "Age": 20,
       "Grade": "A",
       "Email": "aarav.patel@example.com"
@@ -121,103 +125,118 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<NavBar />} />
+        <MyContext.Provider value={students[0]}>
 
-          {/* def-01 */}
-          <Route path="/def01" element={<RenderVariable1 />} />
+          <Routes>
+            <Route path="/" element={<NavBar />} />
 
-          {/* def-02 */}
-          <Route path="/def02" element={<RenderObj2 />} />
+            {/* def-01 */}
+            <Route path="/def01" element={<RenderVariable1 />} />
 
-          {/* def-03 */}
-          <Route path="/def03" element={<RenderArrStr3 />} />
+            {/* def-02 */}
+            <Route path="/def02" element={<RenderObj2 />} />
 
-
-          {/* def-04 */}
-          <Route path="/def04" element={<RenderArrObj />} />
+            {/* def-03 */}
+            <Route path="/def03" element={<RenderArrStr3 />} />
 
 
-          {/* def-05 */}
-          <Route path="/def05" element={<RenderArrObj5 />} />
+            {/* def-04 */}
+            <Route path="/def04" element={<RenderArrObj />} />
 
 
-          {/* def-06 */}
-          <Route path="/def06-01" element={<RenderProps6 title="Chiranj" desc="Admin" status="Active" />} />
-          <Route path="/def06-02" element={<RenderProps6 title="Prince" desc="Admin" status="Deactive" />} />
-          <Route path="/def06-03" element={<RenderProps6 title="Jatin" desc="Admin" status="Deactive" />} />
+            {/* def-05 */}
+            <Route path="/def05" element={<RenderArrObj5 />} />
 
 
-          {/* def-07 */}
-          <Route path="/def07-01" element={<RenderPropsBtn7 label="Click" sty={sty1} />} />
-          <Route path="/def07-02" element={<RenderPropsBtn7 label="Login" sty={sty2} />} />
-          <Route path="/def07-03" element={<RenderPropsBtn7 label="Logout" sty={sty3} />} />
+            {/* def-06 */}
+            <Route path="/def06-01" element={<RenderProps6 title="Chiranj" desc="Admin" status="Active" />} />
+            <Route path="/def06-02" element={<RenderProps6 title="Prince" desc="Admin" status="Deactive" />} />
+            <Route path="/def06-03" element={<RenderProps6 title="Jatin" desc="Admin" status="Deactive" />} />
 
 
-          {/* def-08 */}
-          <Route path="/def08" element={<div className='con'>
-            <BackButton />
-            {
-
-              students.map((obj) => {
-                return <RCompIterateArrObj8 key={obj.Id} student={obj} />
-              })
-            }
-          </div>} />
+            {/* def-07 */}
+            <Route path="/def07-01" element={<RenderPropsBtn7 label="Click" sty={sty1} />} />
+            <Route path="/def07-02" element={<RenderPropsBtn7 label="Login" sty={sty2} />} />
+            <Route path="/def07-03" element={<RenderPropsBtn7 label="Logout" sty={sty3} />} />
 
 
-          {/* def-09 */}
-          <Route path="/def09" element={<StateManage9 />} />
+            {/* def-08 */}
+            <Route path="/def08" element={<div className='con'>
+              <BackButton />
+              {
+
+                students.map((obj) => {
+                  return <RCompIterateArrObj8 key={obj.Id} student={obj} />
+                })
+              }
+            </div>} />
 
 
-          {/* def-10 */}
-          <Route path="/def10" element={<ConditionalRen10 />} />
+            {/* def-09 */}
+            <Route path="/def09" element={<StateManage9 />} />
 
 
-          {/* def-11 */}
-          <Route path="/def11" element={<InputDataCollect11 />} />
+            {/* def-10 */}
+            <Route path="/def10" element={<ConditionalRen10 />} />
 
 
-          {/* def-12 */}
-          <Route path="/def12" element={<Todo12 />} />
+            {/* def-11 */}
+            <Route path="/def11" element={<InputDataCollect11 />} />
 
 
-          {/* def-13 */}
-          <Route path="/def13" element={<CollectFormData13 />} />
+            {/* def-12 */}
+            <Route path="/def12" element={<Todo12 />} />
 
 
-          {/* def-14 */}
-          <Route path="/def14" element={<LifeCycle14 />} />
+            {/* def-13 */}
+            <Route path="/def13" element={<CollectFormData13 />} />
 
 
-          {/* def-15 */}
-          <Route path="/def15" element={<BmiCalculator15 />} />
+            {/* def-14 */}
+            <Route path="/def14" element={<LifeCycle14 />} />
 
 
-          {/* def-16 */}
-          <Route path="/def16" element={<DigitalClock16 />} />
+            {/* def-15 */}
+            <Route path="/def15" element={<BmiCalculator15 />} />
 
 
-          {/* def-17 */}
-          <Route path="/def17" element={<StopWatch17 />} />
+            {/* def-16 */}
+            <Route path="/def16" element={<DigitalClock16 />} />
 
 
-          {/* def-18 */}
-          <Route path="/def18" element={<AxiosUse18 />} />
+            {/* def-17 */}
+            <Route path="/def17" element={<StopWatch17 />} />
 
 
-          {/* def-19 */}
-          <Route path="/def19" element={<WeatherAPI19 />} />
+            {/* def-18 */}
+            <Route path="/def18" element={<AxiosUse18 />} />
 
 
-          {/* def-20 */}
-          <Route path="/def20" element={<Carousel20 />} />
+            {/* def-19 */}
+            <Route path="/def19" element={<WeatherAPI19 />} />
 
 
-          {/* def-21 */}
-          <Route path="/def21" element={<Accordian21 />} />
+            {/* def-20 */}
+            <Route path="/def20" element={<Carousel20 />} />
 
-        </Routes>
+
+            {/* def-21 */}
+            <Route path="/def21" element={<Accordian21 />} />
+
+            {/* def-22 */}
+            <Route path="/def22" element={<PropDrilling22 name="Kakadiya" />} />
+
+            {/* def-23 */}
+            <Route path="/def23" element={<ContextUse23 />} />
+
+            {/* def-24 */}
+            <Route path="/def24" element={<StateLifting24 />} />
+
+
+
+          </Routes>
+        </MyContext.Provider>
+
       </BrowserRouter>
 
     </>
