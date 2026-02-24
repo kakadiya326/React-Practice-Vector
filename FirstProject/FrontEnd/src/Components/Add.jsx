@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { useNavigate } from "react-router-dom"
 
 const Add = () => {
     let [data, setData] = useState({
@@ -9,7 +10,7 @@ const Add = () => {
         dob: "",
         email: "",
     });
-
+    let navigate = useNavigate();
     let funcollect = (e) => {
         setData({ ...data, [e.target.name]: e.target.value });
     }
@@ -17,6 +18,9 @@ const Add = () => {
     let addF = () => {
         axios.post('http://localhost:5000/add', data).then((res) => {
             console.log(res);
+            if (res.data.msg == "Data added") {
+                navigate("/")
+            }
 
         }).catch((e) => {
             console.log(e);
