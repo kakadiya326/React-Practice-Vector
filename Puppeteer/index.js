@@ -2,10 +2,14 @@ const express = require("express");
 const puppeteer = require("puppeteer");
 
 const app = express();
+app.listen(5000, () => {
+  console.log("Server running on http://localhost:5000");
+});
+let browser; //Launch browser once when server starts.
 
 app.get("/invoice", async (req, res) => {
 
-  const browser = await puppeteer.launch(); //Open Chrome automatically (without showing UI). and It returns a browser instance. Without this → nothing works.
+  browser = await puppeteer.launch(); //Open Chrome automatically (without showing UI). and It returns a browser instance. Without this → nothing works.
   const page = await browser.newPage(); //It creates a new tab inside that browser. and Open a new tab in Chrome.
 
   const html = `
@@ -86,21 +90,55 @@ app.get("/invoice", async (req, res) => {
 
   const pdf = await page.pdf({
     format: "A4",
-    printBackground: true
+    landscape: false,
+    printBackground: true,
+    displayHeaderFooter: true,
+    headerTemplate: `
+    <div style="font-size:10px; width:100%; text-align:center;">
+      ABC Electronics Pvt Ltd
+    </div>
+    `,
+    footerTemplate: `
+    <div style="font-size:10px; width:100%; text-align:center;">
+      Page <span class="pageNumber"></span> of 
+      <span class="totalPages"></span>
+    </div>
+    `,
+    margin: {
+      top: "40px",
+      bottom: "40px",
+      left: "20px",
+      right: "20px"
+    }
   }); //Print this page as a PDF. and It returns a PDF file buffer stored in memory. That pdf variable contains actual PDF data.
 
-  await browser.close(); // Closes the browser.
+  await page.close(); // Closes the browser.
 
   res.set({
     "Content-Type": "application/pdf",
     "Content-Disposition": "attachment; filename=invoice.pdf"
   });
 
-  res.send(pdf);// Sends the generated PDF to the client (React or browser). The pdf variable contains binary PDF data.
-}); 
 
-app.listen(5000, () => {
-  console.log("Server running on http://localhost:5000");
+  res.send(pdf);// Sends the generated PDF to the client (React or browser). The pdf variable contains binary PDF data.
+});
+
+app.get("/screenshot", async (req, res) => {
+  const url = req.query.url;
+
+  const browser = await puppeteer.launch({ headless: true });
+  const page = await browser.newPage();
+
+  await page.goto(url);
+
+  const screenshot = await page.screenshot({
+    fullPage: true
+  });
+
+  await browser.close();
+
+  res.set("Content-Type", "image/png");
+  res.send(screenshot);
 });
 
 /*
