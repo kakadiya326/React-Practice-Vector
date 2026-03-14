@@ -1,0 +1,10 @@
+let express = require("express")
+const { register, login, updmarks, userDetails, gethnos, usersDetails } = require("../controllers/userController")
+let route = new express.Router()
+route.post("/register", register)
+route.post("/login", login)
+route.put("/updmarks", updmarks)
+route.get("/getdet/:hno", userDetails)
+route.get("/gethnos", gethnos)
+route.get("/data", usersDetails)
+module.exports = route

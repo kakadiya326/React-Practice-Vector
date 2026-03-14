@@ -1,0 +1,21 @@
+nav{
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    background-color: bisque;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+nav a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: azure;
+    border-radius: 20px;
+    color: black;
+}
